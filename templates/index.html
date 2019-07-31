@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{% block title %}{{ title }}{% endblock %}
+{% block header %}Welcome to Ruth's Blogz{% endblock %}
+{% block content %}
+<h3>List of Authors:</h3>
+{% if users|length == 0 %}
+    <p>No authors yet!</p>
+{% else %}
+    {% for user in users %}
+    <li><a href="/user_blog?id={{user.id}}">{{user.username}}</a></li>
+    {% endfor %}
+{% endif %}
+{% endblock %}

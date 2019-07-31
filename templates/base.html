@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+                .error {
+                    color:blueviolet;
+                }
+                .ul{
+                    list-style-type: none;
+                }
+  
+            </style>
+    </head>
+    <body>
+            <a href="/">Home</a> | <a href="/user_blog">my posts</a> | <a href="/new_blog">new post</a> 
+            | <a href="/login">login</a>
+            | <a href="/logout">logout</a>
+    {% block content %}
+        {% endblock %}
+    </body>
+</html>
